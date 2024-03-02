@@ -53,15 +53,13 @@ npm install
 There are two methods available:
 
 
-#### mockLCW(deeplink, did)
-
-The `did` is optional. If not supplied a fake did (did:key:z6MkqJAUa299LgRoKiaHtFG6KWVK1iUddAM5oUHsGRto9hfz) will be used.
+#### mockLCW(deeplink)
 
 1. Parses the deeplink, which should look similar to:
 
 ``` https://lcw.app/request.html?issuer=issuer.example.com&auth_type=bearer&challenge=f78e1e08-a2df-46ca-bb0b-6b08e3036815&vc_request_url=http://issuer.dcconsortium.org/exchange/68546cc1-9220-42c1-b0a5-78d429ed289b/f78e1e08-a2df-46ca-bb0b-6b08e3036815```
 
-2. Using the value of the `challenge` query parameter from the deeplink, and the supplied did (or a fake if not supplied) constructs a signed DIDAuth like so:
+2. Using the value of the `challenge` query parameter from the deeplink, and a holder DID (did:key:TODO add here and should match those below) constructs a signed DIDAuth like so:
 
 ```
 {
@@ -86,9 +84,7 @@ The `did` is optional. If not supplied a fake did (did:key:z6MkqJAUa299LgRoKiaHt
 
 3. Posts the signed DIDAuth to the value of the `vc_request_url` query parameter from the deeplink.
 
-#### getDIDAuth(deeplink, did)
-
-The `did` is optional. If not supplied a fake did will be used.
+#### getDIDAuth(deeplink)
 
 Same as `mockLCW` except it doesn't post the DIDAuth the vc_request_url, and instead simply returns it.
 
