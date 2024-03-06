@@ -7,7 +7,7 @@
 
 > Given a deeplink that normally opens the LCW, the lcw-mock will parse the link, construct a DIDAuth containing the value of the 'challenge' parameter from the deeplink along with the holder's DID, sign the DIDAuth, and POST it to the value of the `vc_request_url` from the deeplink.
 > 
-> For use in the browser, Node.js, and React Native.
+> For use in the browser and Node.js.
 
 ## Table of Contents
 

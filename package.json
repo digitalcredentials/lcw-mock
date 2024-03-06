@@ -1,6 +1,6 @@
 {
-  "name": "@digitalcredentials/isomorphic-lib-template",
-  "description": "A Typescript/Javascript isomorphic library template, for use in the browser, Node.js, and React Native.",
+  "name": "@digitalcredentials/lcw-mock",
+  "description": "Mocks the part of the [Learner Credential Wallet (LCW)](https://lcw.app) in the exchange between a wallet and an issuer .",
   "version": "0.0.1",
   "scripts": {
     "build": "npm run clear && tsc -d && tsc -p tsconfig.esm.json",
@@ -22,6 +22,11 @@
   "browser": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "dependencies": {
+    "@digitalcredentials/ed25519-signature-2020": "^4.0.0",
+    "@digitalcredentials/ed25519-verification-key-2020": "^4.0.0",
+    "@digitalcredentials/security-document-loader": "^5.0.0",
+    "@digitalcredentials/vc": "^7.0.0",
+    "axios": "^1.6.7" 
   },
   "resolutions": {
     "@typescript-eslint/typescript-estree": "^6.1.6"
@@ -46,7 +51,8 @@
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "ts-standard": "^12.0.2",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "axios-mock-adapter": "^1.22.0"
   },
   "publishConfig": {
     "access": "public"
@@ -76,8 +82,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalcredentials/isomorphic-lib-template"
+    "url": "https://github.com/digitalcredentials/lcw-mock"
   },
-  "homepage": "https://github.com/digitalcredentials/isomorphic-lib-template",
-  "bugs": "https://github.com/digitalcredentials/isomorphic-lib-template/issues"
+  "homepage": "https://github.com/digitalcredentials/lcw-mock",
+  "bugs": "https://github.com/digitalcredentials/lcw-mock/issues"
 }
